@@ -19,8 +19,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -31,23 +30,18 @@ body {
 
 .container {
   border-radius: 5px;
-  width: 60%;
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-top: 15%;
-  height: 45%;
+  width: 76%;
+  margin-left: 12%;
+  margin-right: 12%;
+  margin-top: 12%;
+  margin-bottom: 12%;
+  height: 52%;
   position: absolute;
   /* background-color: yellowgreen; */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
-
-.container .container__img {
+.container .header .container__img {
   /* background-color: lightcoral; */
   width: 50%;
   height: 100%;
@@ -55,23 +49,17 @@ body {
   position: relative;
   border-radius: 0 5px 5px 0;
 }
-
-.container .container__img .img {
-  -webkit-filter: invert(39%) sepia(40%) saturate(340%) hue-rotate(225deg) brightness(70%) contrast(180%);
-          filter: invert(39%) sepia(40%) saturate(340%) hue-rotate(225deg) brightness(70%) contrast(180%);
+.container .header .container__img .img {
+  filter: invert(39%) sepia(40%) saturate(340%) hue-rotate(225deg) brightness(70%) contrast(180%);
   border-radius: 0 5px 5px 0;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
-
 .container .container__text {
   width: 50%;
   /* float: left; */
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   background: var(--Dark-desaturated-blue);
   height: 100%;
   position: relative;
@@ -79,50 +67,39 @@ body {
   overflow-y: auto;
   border-radius: 5px 0px 0px 5px;
 }
-
 .container .container__text h1 {
   color: var(--White);
   font-weight: 700;
+  font-size: 2.3rem;
 }
-
 .container .container__text .txt {
-  margin-top: 30px;
+  margin-top: 2.3rem;
   margin-bottom: 0px;
-  font-size: 15px;
+  font-size: 1.1rem;
   color: var(--Slightly-transparent-white);
+  line-height: 30px;
 }
-
 .container .container__text .insights {
   color: var(--Soft-violet);
 }
-
 .container .container__text .figures {
   width: 80%;
   height: 10%;
-  margin-top: 55px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-top: 3.5rem;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: absolute;
 }
-
 .container .container__text .figures .figures__items {
   width: 30%;
   /* float: left; */
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .container .container__text .figures h2 {
-  font-size: 17px;
+  font-size: 1.2rem;
   text-align: left;
   font-weight: 700;
 }
-
 .container .container__text .figures .figures__text {
   color: var(--Slightly-transparent-white);
   text-align: left;
@@ -200,6 +177,7 @@ body {
   .container .container__text .figures .figures__items .figures__text {
     text-align: center;
   }
+
   .attribution {
     left: -8%;
     width: 400px;
@@ -213,4 +191,136 @@ body {
     font-size: 10px;
   }
 }
+@media (min-width: 1000px) and (max-width: 1230px) {
+  .container .container__text .txt {
+    margin-top: 1rem;
+  }
+  .container .container__text .figures {
+    width: 80%;
+    height: 10%;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (max-width: 999px) {
+  .container .container__text .txt {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  .container .container__text .figures {
+    margin-top: 0.5rem;
+  }
+}
+@media screen and (max-width: 898px) {
+  .container .container__text h1 {
+    font-size: 1.8rem;
+  }
+  .container .container__text .txt {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .container .container__text .figures {
+    margin-top: 1rem;
+  }
+  .container .container__text .figures h2 {
+    font-size: 1rem;
+  }
+  .container .container__text .figures .figures__text {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 751px) {
+  .container .container__text h1 {
+    font-size: 1.5rem;
+  }
+  .container .container__text .txt {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .container .container__text .figures {
+    margin-top: 1rem;
+  }
+  .container .container__text .figures h2 {
+    font-size: 1rem;
+  }
+  .container .container__text .figures .figures__text {
+    font-size: 0.7rem;
+  }
+}
+@media screen and (max-width: 680px) {
+  .container .container__text h1 {
+    font-size: 1.2rem;
+  }
+  .container .container__text .txt {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .container .container__text .figures {
+    margin-top: 1rem;
+  }
+  .container .container__text .figures h2 {
+    font-size: 1rem;
+  }
+  .container .container__text .figures .figures__text {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 565px) {
+  .container .container__text {
+    padding: 1.5rem;
+  }
+  .container .container__text h1 {
+    font-size: 1.1rem;
+  }
+  .container .container__text .txt {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  .container .container__text .figures {
+    margin-top: 1.1rem;
+  }
+  .container .container__text .figures h2 {
+    font-size: 1rem;
+  }
+  .container .container__text .figures .figures__text {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 457px) {
+  .container .container__text h1 {
+    font-size: 1rem;
+  }
+  .container .container__text .txt {
+    font-size: 0.75rem;
+    margin-top: 0.4rem;
+  }
+  .container .container__text .figures {
+    margin-top: 1.5rem;
+  }
+  .container .container__text .figures h2 {
+    font-size: 0.5rem;
+  }
+  .container .container__text .figures .figures__text {
+    font-size: 0.5rem;
+  }
+}
+@media screen and (max-width: 430px) {
+  .container .container__text h1 {
+    font-size: 0.8rem;
+  }
+  .container .container__text .txt {
+    font-size: 0.6rem;
+    margin-top: 1rem;
+  }
+  .container .container__text .figures {
+    margin-top: 1.2rem;
+  }
+  .container .container__text .figures h2 {
+    font-size: 0.8rem;
+  }
+  .container .container__text .figures .figures__text {
+    font-size: 0.4rem;
+  }
+}
+/*# sourceMappingURL=styles.scss.map */
+
 /*# sourceMappingURL=styles.css.map */
